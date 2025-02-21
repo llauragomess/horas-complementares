@@ -105,7 +105,6 @@ const tipoSelect = document.getElementById("tipo");
 const subtipoSelect = document.getElementById("subtipo");
 
 tipoSelect.addEventListener("change", (e) => {
-  console.log(e)
   const tipo = e.target.value;
   subtipoSelect.innerHTML = '<option value="">Selecione o subtipo</option>';
 
@@ -194,7 +193,6 @@ window.adicionarAtividade = async () => {
           horasAproveitadas: horasAproveitadas
         });
 
-        console.log("Atividade salva com sucesso!");
 
         novaAtividade.innerHTML = `
           <td>${tipo}</td>
@@ -253,7 +251,6 @@ window.carregarAtividades = async () => {
 window.excluirAtividade = async (id) => {
   try {
     await deleteDoc(doc(db, "atividades", id));
-    console.log("Atividade excluída com sucesso!");
     carregarAtividades(); 
   } catch (e) {
     console.error("Erro ao excluir atividade: ", e);
