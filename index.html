@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividades Complementares</title>
+    <link rel="stylesheet" href="styles.css">
+    <script type='module' src="scripts.js"></script>
+    <script src="firebaseConfig.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h2>Cadastro de Atividade Complementar</h2>
+        <select id="tipo">
+            <option value="">Selecione o tipo</option>
+            <option value="Extensao">Extensão</option>
+            <option value="Ensino">Ensino</option>
+            <option value="Pesquisa">Pesquisa</option>
+        </select>
+        <select id="subtipo">
+            <option value="">Selecione o subtipo</option>
+        </select>
+        <input type="text" id="descricao" placeholder="Descrição">
+        <input type="number" id="horas" placeholder="Horas realizadas">
+        <div class="button-container">
+            <button onclick="adicionarAtividade()">Adicionar</button>
+        </div>
+        
+        <h2 style="margin-top: 1rem; margin-bottom: 1rem;">Atividades Cadastradas</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Tipo</th>
+                    <th>Subtipo</th>
+                    <th>Descrição</th>
+                    <th>Horas</th>
+                    <th>Horas Aproveitadas</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody id="atividadesCadastradas">
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
