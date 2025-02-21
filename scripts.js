@@ -4,12 +4,12 @@ import { getFirestore, collection, addDoc, getDocs, query, where, deleteDoc, doc
 import { v4 as uuidv4 } from 'https://jspm.dev/uuid';
 
 const firebaseConfig = {
-  apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
-  authDomain: process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN,
-  projectId: process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID,
-  storageBucket: process.env.NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET,
-  messagingSenderId: process.env.NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID,
-  appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID
+  apiKey: "AIzaSyDozkS5Oe1uV85tiznKRzAE8b5Frz93ao4",
+  authDomain: "horas-complementares-d84f8.firebaseapp.com",
+  projectId: "horas-complementares-d84f8",
+  storageBucket: "horas-complementares-d84f8.firebasestorage.app",
+  messagingSenderId: "172075774197",
+  appId: "1:172075774197:web:c1b2f6d72e3faad74995bc"
 };
 
 const app = initializeApp(firebaseConfig);
