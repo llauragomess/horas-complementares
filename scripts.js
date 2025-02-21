@@ -3,9 +3,6 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/11.3.1/firebas
 import { getFirestore, collection, addDoc, getDocs, query, where, deleteDoc, doc } from "https://www.gstatic.com/firebasejs/11.3.1/firebase-firestore.js";
 import { v4 as uuidv4 } from 'https://jspm.dev/uuid';
 
-const app = initializeApp(firebaseConfig);
-const db = getFirestore(app);
-
 const firebaseConfig = {
   apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
   authDomain: process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN,
@@ -14,6 +11,9 @@ const firebaseConfig = {
   messagingSenderId: process.env.NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID,
   appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID
 };
+
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
 
 let uuid = localStorage.getItem("uuid");
 
