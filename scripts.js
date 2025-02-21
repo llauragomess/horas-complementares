@@ -105,6 +105,7 @@ const tipoSelect = document.getElementById("tipo");
 const subtipoSelect = document.getElementById("subtipo");
 
 tipoSelect.addEventListener("change", (e) => {
+  console.log(e)
   const tipo = e.target.value;
   subtipoSelect.innerHTML = '<option value="">Selecione o subtipo</option>';
 
